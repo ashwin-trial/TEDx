@@ -3,6 +3,7 @@
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcn-ui&logoColor=white)](https://ui.shadcn.com/)
 
@@ -10,6 +11,14 @@ This project is a sleek, modern, and responsive landing page for "TEDxCUSAT". It
 
 
 ## ✨ Features
+
+- 🎥 Hero section with embedded video and ticket button
+- ⏳ Countdown timer animation
+- 👨‍💼 Speakers carousel
+- 💬 Testimonials
+- 🤝 Sponsors showcase
+- 🌙 Dark theme aesthetic
+- 📱 Fully responsive across devices
 
 - **Modern UI/UX**: Clean and engaging design.
 - **Responsive**: Fully responsive for all devices.
@@ -19,7 +28,7 @@ This project is a sleek, modern, and responsive landing page for "TEDxCUSAT". It
 
 ## 🚀 Live Demo
 
-[Check out the live demo here!]([https://your-live-url.com](https://tedx-indol.vercel.app/))
+[Check out the live demo here!](https://tedx-indol.vercel.app/)
 
 ## 🛠️ Built With
 
