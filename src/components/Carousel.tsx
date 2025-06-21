@@ -25,7 +25,12 @@ const DEFAULT_ITEMS = [
 const DRAG_BUFFER = 0;
 const VELOCITY_THRESHOLD = 500;
 const GAP = 16;
-const SPRING_OPTIONS = { type: "spring", stiffness: 300, damping: 30 };
+
+const SPRING_OPTIONS = {
+  type: "spring" as const,
+  stiffness: 300,
+  damping: 30,
+};
 
 export default function Carousel({
   items = DEFAULT_ITEMS,
@@ -62,7 +67,7 @@ export default function Carousel({
   const x = useMotionValue(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isResetting, setIsResetting] = useState(false);
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (pauseOnHover && containerRef.current) {
@@ -112,7 +117,7 @@ export default function Carousel({
     }
   };
 
-  const handleDragEnd = (_, info) => {
+  const handleDragEnd = (_: any, info: any) => {
     const offset = info.offset.x;
     const velocity = info.velocity.x;
     if (offset < -DRAG_BUFFER || velocity < -VELOCITY_THRESHOLD) {
@@ -155,7 +160,6 @@ export default function Carousel({
         boxSizing: "border-box",
       }}
     >
-      {/* Track Wrapper for Mobile Overflow Fix */}
       <div className="w-full overflow-hidden">
         <motion.div
           className="flex"
@@ -164,10 +168,10 @@ export default function Carousel({
           style={{
             gap: `${GAP}px`,
             x,
-          }}
+          } as React.CSSProperties}
           onDragEnd={handleDragEnd}
           animate={{ x: -(currentIndex * trackItemOffset) }}
-          transition={effectiveTransition}
+          transition={effectiveTransition as any}
           onAnimationComplete={handleAnimationComplete}
         >
           {carouselItems.map((item, index) => {
@@ -187,8 +191,27 @@ export default function Carousel({
                   width: itemWidth,
                   height: "100%",
                   rotateY,
+                } as React.CSSProperties}
+                transition={effectiveTransition as any}
+                onClick={(e) => {
+                  if (window.innerWidth >= 768 && !isResetting) {
+                    const bounds = e.currentTarget.getBoundingClientRect();
+                    const clickX = e.clientX - bounds.left;
+                    const clickedLeft = clickX < bounds.width / 2;
+
+                    setCurrentIndex((prev) => {
+                      if (clickedLeft) {
+                        return loop
+                          ? (prev - 1 + carouselItems.length) % carouselItems.length
+                          : Math.max(prev - 1, 0);
+                      } else {
+                        return loop
+                          ? (prev + 1) % carouselItems.length
+                          : Math.min(prev + 1, carouselItems.length - 1);
+                      }
+                    });
+                  }
                 }}
-                transition={effectiveTransition}
               >
                 <div className="relative w-full h-full overflow-hidden group">
                   <img
@@ -215,27 +238,30 @@ export default function Carousel({
         }`}
       >
         <div className="mt-6 flex w-[150px] justify-between px-8">
-          {items.map((_, index) => (
-            <motion.div
-              key={index}
-              className={`h-2 w-2 rounded-full cursor-pointer transition-colors duration-150 ${
-                currentIndex % items.length === index
-                  ? round
-                    ? "bg-white"
-                    : "bg-[#E62B1E]"
-                  : round
-                  ? "bg-[#555]"
-                  : "bg-[rgba(51,51,51,0.4)]"
-              }`}
-              animate={{
-                scale: currentIndex % items.length === index ? 1.2 : 1,
-              }}
-              onClick={() => {
-                if (!isResetting) setCurrentIndex(index);
-              }}
-              transition={{ duration: 0.15 }}
-            />
-          ))}
+          {items.map((_, index) => {
+            const isActive = currentIndex % items.length === index;
+            return (
+              <motion.div
+                key={index}
+                className={`h-2 w-2 rounded-full cursor-pointer transition-all duration-200 ${
+                  isActive
+                    ? round
+                      ? "bg-white border border-white shadow-lg"
+                      : "bg-[#E62B1E] border border-[#E62B1E] shadow-md"
+                    : round
+                    ? "bg-[#ddd]"
+                    : "bg-[#ccc]"
+                }`}
+                animate={{
+                  scale: isActive ? 1.2 : 1,
+                }}
+                onClick={() => {
+                  if (!isResetting) setCurrentIndex(index);
+                }}
+                transition={{ duration: 0.15 }}
+              />
+            );
+          })}
         </div>
       </div>
     </div>

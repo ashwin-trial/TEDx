@@ -23,8 +23,9 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled, isHeroSection }) => {
           isHeroSection ? 'bg-transparent px-6 py-4' : 'glass-morph rounded-2xl px-6 py-3'
         } flex items-center ${isHeroSection ? 'justify-start' : 'justify-between'}`}
       >
-        {/* Logo */}
-        <div
+        {/* Logo (scroll to HeroSection) */}
+        <a
+          href="#hero"
           className={`transition-all duration-500 ${
             isHeroSection
               ? 'text-2xl font-bold'
@@ -35,7 +36,7 @@ const Navbar: React.FC<NavbarProps> = ({ isScrolled, isHeroSection }) => {
         >
           <span className="text-tedx-red">TEDx</span>
           <span className="text-white">CUSAT</span>
-        </div>
+        </a>
 
         {/* Desktop Links */}
         {!isHeroSection && (

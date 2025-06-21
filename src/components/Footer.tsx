@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Footer: React.FC = () => {
@@ -19,16 +18,36 @@ const Footer: React.FC = () => {
               Ideas Worth Spreading – Engineered for Tomorrow. Join us for an unforgettable experience of innovation, inspiration, and transformation.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-tedx-gray hover:text-tedx-red transition-colors duration-300">
+              <a
+                href="https://x.com/Tedx_cusat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-tedx-gray hover:text-tedx-red transition-colors duration-300"
+              >
                 Twitter
               </a>
-              <a href="#" className="text-tedx-gray hover:text-tedx-red transition-colors duration-300">
+              <a
+                href="https://www.instagram.com/tedxcusat/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-tedx-gray hover:text-tedx-red transition-colors duration-300"
+              >
                 Instagram
               </a>
-              <a href="#" className="text-tedx-gray hover:text-tedx-red transition-colors duration-300">
+              <a
+                href="https://www.linkedin.com/company/tedxcusat2024/?originalSubdomain=in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-tedx-gray hover:text-tedx-red transition-colors duration-300"
+              >
                 LinkedIn
               </a>
-              <a href="#" className="text-tedx-gray hover:text-tedx-red transition-colors duration-300">
+              <a
+                href="https://www.tedxcusat.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-tedx-gray hover:text-tedx-red transition-colors duration-300"
+              >
                 YouTube
               </a>
             </div>
@@ -38,10 +57,26 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#speakers" className="text-tedx-gray hover:text-white transition-colors duration-300">Speakers</a></li>
-              <li><a href="#sponsors" className="text-tedx-gray hover:text-white transition-colors duration-300">Sponsors</a></li>
-              <li><a href="#team" className="text-tedx-gray hover:text-white transition-colors duration-300">Team</a></li>
-              <li><a href="#tickets" className="text-tedx-gray hover:text-white transition-colors duration-300">Tickets</a></li>
+              <li>
+                <a href="#speakers" className="text-tedx-gray hover:text-white transition-colors duration-300">
+                  Speakers
+                </a>
+              </li>
+              <li>
+                <a href="#sponsors" className="text-tedx-gray hover:text-white transition-colors duration-300">
+                  Sponsors
+                </a>
+              </li>
+              <li>
+                <a href="#team" className="text-tedx-gray hover:text-white transition-colors duration-300">
+                  Team
+                </a>
+              </li>
+              <li>
+                <a href="#tickets" className="text-tedx-gray hover:text-white transition-colors duration-300">
+                  Tickets
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -52,7 +87,11 @@ const Footer: React.FC = () => {
               <p>CUSAT Campus</p>
               <p>Kochi, Kerala</p>
               <p>India - 682022</p>
-              <p className="text-white">contact@tedxcusat.com</p>
+              <p>
+                <a href="mailto:contact@tedxcusat.com" className="text-white hover:underline">
+                  contact@tedxcusat.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

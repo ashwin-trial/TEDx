@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 const HeroSection: React.FC = () => {
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div id="hero" className="w-full h-screen flex items-center justify-center">
       <div className="relative w-[90vw] h-[75vh] md:w-[85vw]">
 
         {/* Book Tickets Button */}
@@ -13,23 +13,44 @@ const HeroSection: React.FC = () => {
           </Button>
         </div>
 
-        {/* Bottom-Right Title Text */}
-        <div className="absolute bottom-6 right-6 md:bottom-12 md:right-12 z-20 text-left">
-          <h1 className="text-red-600 text-3xl md:text-5xl font-bold leading-tight drop-shadow-md">
+        {/* ---- Mobile View: Bottom Left Title & Bottom Right Date ---- */}
+        <div className="md:hidden">
+          {/* Title & Slogan (Bottom Left) */}
+          <div className="absolute bottom-6 left-6 text-left z-20">
+            <h1 className="text-red-600 text-2xl font-bold leading-tight drop-shadow-md">
+              Resonance:
+            </h1>
+            <p className="text-white text-sm font-medium mt-1 drop-shadow">
+              Voices That Echo Beyond Time.
+            </p>
+          </div>
+
+          {/* Date (Bottom Right) */}
+          <div className="absolute bottom-6 right-6 text-white text-center z-20 leading-none">
+            <div className="flex flex-col items-center scale-[1.15]">
+              <span className="text-sm font-semibold text-red-500 tracking-widest">DEC</span>
+              <span className="text-3xl font-extrabold text-white">10</span>
+            </div>
+          </div>
+        </div>
+
+        {/* ---- Desktop View: Keep Existing Layout ---- */}
+
+        {/* Title Text */}
+        <div className="hidden md:block absolute bottom-12 right-12 z-20 text-left">
+          <h1 className="text-red-600 text-5xl font-bold leading-tight drop-shadow-md">
             Resonance:
           </h1>
-          <p> </p>
-          <p> </p>
-          <p className="text-white text-base md:text-xl font-medium mt-2 drop-shadow">
+          <p className="text-white text-xl font-medium mt-2 drop-shadow">
             Voices That Echo Beyond Time.
           </p>
         </div>
 
-        {/* Bottom-Left Calendar Date (Transparent & Big) */}
-        <div className="absolute bottom-6 left-6 md:bottom-12 md:left-12 z-20 text-white text-center leading-none">
-          <div className="flex flex-col items-center scale-[1.25] md:scale-[1.4]">
-            <span className="text-lg md:text-xl font-semibold text-red-500 tracking-widest">DEC</span>
-            <span className="text-4xl md:text-5xl font-extrabold text-white">10</span>
+        {/* Calendar Date */}
+        <div className="hidden md:block absolute bottom-12 left-12 z-20 text-white text-center leading-none">
+          <div className="flex flex-col items-center scale-[1.4]">
+            <span className="text-xl font-semibold text-red-500 tracking-widest">DEC</span>
+            <span className="text-5xl font-extrabold text-white">10</span>
           </div>
         </div>
 
