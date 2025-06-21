@@ -5,7 +5,6 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)](https://www.framer.com/motion/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcn-ui&logoColor=white)](https://ui.shadcn.com/)
 
 This project is a sleek, modern, and responsive landing page for "TEDxCUSAT". It's designed to be the central hub of information for the event, featuring sections for speakers, sponsors, a countdown timer, team members, and testimonials. Built with a focus on great user experience and performance.
 
@@ -127,9 +126,6 @@ If you have a suggestion that would make this better, please fork the repo and c
 4.  Push to the Branch (`git push origin feature/AmazingFeature`)
 5.  Open a Pull Request
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information. (You may need to add a LICENSE file).
 
 ## 🙏 Acknowledgements
 
@@ -138,5 +134,3 @@ Distributed under the MIT License. See `LICENSE` for more information. (You may 
 - [shadcn/ui](https://ui.shadcn.com/)
 
 ---
-
-*This README was generated with ❤️*
