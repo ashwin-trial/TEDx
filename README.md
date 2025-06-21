@@ -1,4 +1,4 @@
-# Cusat Nexus Glow
+# TEDxCUSAT Landing Page
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -6,10 +6,8 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![shadcn/ui](https://img.shields.io/badge/shadcn/ui-000000?style=for-the-badge&logo=shadcn-ui&logoColor=white)](https://ui.shadcn.com/)
 
-This project is a sleek, modern, and responsive landing page for the "Cusat Nexus Glow" event. It's designed to be the central hub of information for the event, featuring sections for speakers, sponsors, a countdown timer, team members, and testimonials. Built with a focus on great user experience and performance.
+This project is a sleek, modern, and responsive landing page for "TEDxCUSAT". It's designed to be the central hub of information for the event, featuring sections for speakers, sponsors, a countdown timer, team members, and testimonials. Built with a focus on great user experience and performance.
 
-![Project Screenshot](public/placeholder.svg) 
-*Replace with a real screenshot of the project.*
 
 ## ✨ Features
 
@@ -21,7 +19,7 @@ This project is a sleek, modern, and responsive landing page for the "Cusat Nexu
 
 ## 🚀 Live Demo
 
-[Check out the live demo here!](https://your-live-url.com)
+[Check out the live demo here!]([https://your-live-url.com](https://tedx-indol.vercel.app/))
 
 ## 🛠️ Built With
 
